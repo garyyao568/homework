@@ -36,13 +36,33 @@
                                     <constraint firstAttribute="height" constant="70" id="VOa-bC-4Qp"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEy-k9-1Eq" customClass="JDTextField" customModule="JetDevsHomeWork" customModuleProvider="target">
+                                <rect key="frame" x="35" y="226" width="320" height="54"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="EnO-eq-Ya9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfy-2C-Hko" customClass="JDTextField" customModule="JetDevsHomeWork" customModuleProvider="target">
+                                <rect key="frame" x="35" y="319" width="320" height="54"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="OTM-XH-fzB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="15N-3P-wlr" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="0IU-mi-H5n"/>
                             <constraint firstItem="tYe-0x-NJL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="6Ik-SW-Sw3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JEy-k9-1Eq" secondAttribute="trailing" constant="35" id="Lh2-Wx-P5i"/>
+                            <constraint firstItem="hfy-2C-Hko" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="TMu-X3-jEU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hfy-2C-Hko" secondAttribute="trailing" constant="35" id="U7Q-qm-TDR"/>
+                            <constraint firstItem="JEy-k9-1Eq" firstAttribute="top" secondItem="15N-3P-wlr" secondAttribute="bottom" constant="43" id="c9x-5V-Yae"/>
                             <constraint firstItem="15N-3P-wlr" firstAttribute="top" secondItem="tYe-0x-NJL" secondAttribute="bottom" constant="34" id="hoK-g8-UUE"/>
+                            <constraint firstItem="JEy-k9-1Eq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="pg5-cF-rI2"/>
+                            <constraint firstItem="hfy-2C-Hko" firstAttribute="top" secondItem="JEy-k9-1Eq" secondAttribute="bottom" constant="39" id="z0t-qg-Mwd"/>
                             <constraint firstItem="tYe-0x-NJL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="zTG-CP-ilb"/>
                         </constraints>
                     </view>
