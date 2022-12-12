@@ -50,22 +50,44 @@
                                     <constraint firstAttribute="height" constant="54" id="OTM-XH-fzB"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjt-xX-7Mi" customClass="JDButton" customModule="JetDevsHomeWork" customModuleProvider="target">
+                                <rect key="frame" x="30" y="515" width="330" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oEE-KY-YOm"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="15N-3P-wlr" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="0IU-mi-H5n"/>
                             <constraint firstItem="tYe-0x-NJL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="6Ik-SW-Sw3"/>
+                            <constraint firstItem="yjt-xX-7Mi" firstAttribute="top" secondItem="hfy-2C-Hko" secondAttribute="bottom" constant="142" id="IW5-zn-Hd3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JEy-k9-1Eq" secondAttribute="trailing" constant="35" id="Lh2-Wx-P5i"/>
                             <constraint firstItem="hfy-2C-Hko" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="TMu-X3-jEU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hfy-2C-Hko" secondAttribute="trailing" constant="35" id="U7Q-qm-TDR"/>
+                            <constraint firstItem="yjt-xX-7Mi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="c3e-dE-coD"/>
                             <constraint firstItem="JEy-k9-1Eq" firstAttribute="top" secondItem="15N-3P-wlr" secondAttribute="bottom" constant="43" id="c9x-5V-Yae"/>
                             <constraint firstItem="15N-3P-wlr" firstAttribute="top" secondItem="tYe-0x-NJL" secondAttribute="bottom" constant="34" id="hoK-g8-UUE"/>
                             <constraint firstItem="JEy-k9-1Eq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="pg5-cF-rI2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yjt-xX-7Mi" secondAttribute="bottom" constant="40" id="qB9-iW-WEt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yjt-xX-7Mi" secondAttribute="trailing" constant="30" id="uQZ-lZ-z0N"/>
                             <constraint firstItem="hfy-2C-Hko" firstAttribute="top" secondItem="JEy-k9-1Eq" secondAttribute="bottom" constant="39" id="z0t-qg-Mwd"/>
                             <constraint firstItem="tYe-0x-NJL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="zTG-CP-ilb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="JEy-k9-1Eq" id="Qhi-nJ-hMA"/>
+                        <outlet property="loginButton" destination="yjt-xX-7Mi" id="WKO-a6-t8u"/>
+                        <outlet property="passwordTF" destination="hfy-2C-Hko" id="ZFy-iX-KsM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
