@@ -164,8 +164,8 @@
 		4E677BCC272B827F006E325E /* JetDevsHomeWork */ = {
 			isa = PBXGroup;
 			children = (
+				60A9F10D29470E6D001A2D57 /* Login */,
 				4E677C12272B860A006E325E /* Common */,
-				4E677C08272B83E4006E325E /* Login */,
 				4E677C01272B8367006E325E /* Account */,
 				4E677C00272B8360006E325E /* Home */,
 				4E677BFD272B82D9006E325E /* TabBar */,
@@ -210,8 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				4E677C04272B83C3006E325E /* ViewController */,
-				4E677C03272B83BA006E325E /* ViewModel */,
-				4E677C02272B838E006E325E /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -219,25 +217,9 @@
 		4E677C01272B8367006E325E /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				4E677C07272B83DD006E325E /* Views */,
-				4E677C06272B83D5006E325E /* ViewModel */,
 				4E677C05272B83CA006E325E /* ViewController */,
 			);
 			path = Account;
-			sourceTree = "<group>";
-		};
-		4E677C02272B838E006E325E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		4E677C03272B83BA006E325E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4E677C04272B83C3006E325E /* ViewController */ = {
@@ -256,51 +238,6 @@
 				4E677C0F272B8455006E325E /* AccountViewController.xib */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		4E677C06272B83D5006E325E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4E677C07272B83DD006E325E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		4E677C08272B83E4006E325E /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				4E677C0B272B83FA006E325E /* Views */,
-				4E677C0A272B83F5006E325E /* ViewModel */,
-				4E677C09272B83EE006E325E /* ViewController */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		4E677C09272B83EE006E325E /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		4E677C0A272B83F5006E325E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4E677C0B272B83FA006E325E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		4E677C12272B860A006E325E /* Common */ = {
@@ -359,6 +296,37 @@
 				4E677C4B273230E5006E325E /* UIFont+JetDevs.swift */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		60A9F10D29470E6D001A2D57 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				60A9F10E29470E77001A2D57 /* Views */,
+				60A9F10F29470E7D001A2D57 /* ViewModel */,
+				60A9F11029470E84001A2D57 /* ViewController */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		60A9F10E29470E77001A2D57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		60A9F10F29470E7D001A2D57 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		60A9F11029470E84001A2D57 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		C87474AC52CF468FB6DCCA19 /* Pods */ = {
