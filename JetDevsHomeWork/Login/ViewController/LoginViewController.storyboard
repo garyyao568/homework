@@ -30,11 +30,19 @@
                                     <action selector="closeButtonTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pta-6s-nV1"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_logo" translatesAutoresizingMaskIntoConstraints="NO" id="15N-3P-wlr">
+                                <rect key="frame" x="102.66666666666669" y="113" width="185" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="VOa-bC-4Qp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="15N-3P-wlr" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="0IU-mi-H5n"/>
                             <constraint firstItem="tYe-0x-NJL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="6Ik-SW-Sw3"/>
+                            <constraint firstItem="15N-3P-wlr" firstAttribute="top" secondItem="tYe-0x-NJL" secondAttribute="bottom" constant="34" id="hoK-g8-UUE"/>
                             <constraint firstItem="tYe-0x-NJL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="zTG-CP-ilb"/>
                         </constraints>
                     </view>
@@ -46,6 +54,7 @@
     </scenes>
     <resources>
         <image name="close" width="16" height="16"/>
+        <image name="home_logo" width="185" height="70"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
