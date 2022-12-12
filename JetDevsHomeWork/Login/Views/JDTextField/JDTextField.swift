@@ -10,6 +10,8 @@ import UIKit
 class JDTextField: UIView {
     
     @IBOutlet private(set) weak var mainView: UIView!
+    @IBOutlet private(set) weak var textFieldLabel: UILabel!
+    @IBOutlet private(set) weak var textField: UITextField!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,5 +32,19 @@ class JDTextField: UIView {
         
         mainView.frame = bounds
         mainView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
+    
+    func setTextFieldLabel(with text: String) {
+        textFieldLabel.text = text
+    }
+    
+    func setTextField(placeholder: String,
+                      keyboardType: UIKeyboardType = .default,
+                      returnKeyType: UIReturnKeyType = .next,
+                      secureEntry: Bool = false) {
+        textField.placeholder = placeholder
+        textField.keyboardType = keyboardType
+        textField.isSecureTextEntry = secureEntry
+        textField.returnKeyType = returnKeyType
     }
 }

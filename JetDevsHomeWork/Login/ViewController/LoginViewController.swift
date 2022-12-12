@@ -16,15 +16,30 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setUpLoginButton()
+        setupEmailTF()
+        setupPasswordTF()
+        setupLoginButton()
     }
     
     @IBAction func closeButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true)
     }
     
-    private func setUpLoginButton() {
+    private func setupEmailTF() {
+        emailTF.setTextFieldLabel(with: "Email")
+        emailTF.setTextField(placeholder: "Email",
+                             keyboardType: .emailAddress)
+    }
+    
+    private func setupPasswordTF() {
+        passwordTF.setTextFieldLabel(with: "Password")
+        passwordTF.setTextField(placeholder: "Password",
+                                returnKeyType: .done,
+                                secureEntry: true)
+    }
+    
+    private func setupLoginButton() {
         loginButton.initUI()
-        loginButton.isButtonEnabled = false
+        loginButton.isButtonEnabled = true
     }
 }
