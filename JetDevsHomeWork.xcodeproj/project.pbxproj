@@ -39,6 +39,7 @@
 		4E677C4727322FA4006E325E /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E677C3527322FA4006E325E /* Lato-Semibold.ttf */; };
 		4E677C4827322FA5006E325E /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E677C3627322FA4006E325E /* Lato-ThinItalic.ttf */; };
 		4E677C4C273230E5006E325E /* UIFont+JetDevs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E677C4B273230E5006E325E /* UIFont+JetDevs.swift */; };
+		609A1B422948422200A25C55 /* UIAlertController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A1B412948422200A25C55 /* UIAlertController+alert.swift */; };
 		60A9F1142947114C001A2D57 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A9F1132947114C001A2D57 /* LoginViewController.storyboard */; };
 		60A9F1162947116B001A2D57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A9F1152947116B001A2D57 /* LoginViewController.swift */; };
 		60A9F11929471536001A2D57 /* UIStoryboard+JetDevs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A9F11829471536001A2D57 /* UIStoryboard+JetDevs.swift */; };
@@ -127,6 +128,7 @@
 		4E677C3527322FA4006E325E /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
 		4E677C3627322FA4006E325E /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		4E677C4B273230E5006E325E /* UIFont+JetDevs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+JetDevs.swift"; sourceTree = "<group>"; };
+		609A1B412948422200A25C55 /* UIAlertController+alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+alert.swift"; sourceTree = "<group>"; };
 		60A9F1132947114C001A2D57 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		60A9F1152947116B001A2D57 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		60A9F11829471536001A2D57 /* UIStoryboard+JetDevs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+JetDevs.swift"; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 		4E677C4927323092006E325E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				609A1B402948411500A25C55 /* UIAlertController */,
 				60A9F12E29472F8D001A2D57 /* String */,
 				60A9F12929472E65001A2D57 /* UIColor */,
 				60A9F12029471BD7001A2D57 /* UIView */,
@@ -349,6 +352,14 @@
 				4E677C4B273230E5006E325E /* UIFont+JetDevs.swift */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		609A1B402948411500A25C55 /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				609A1B412948422200A25C55 /* UIAlertController+alert.swift */,
+			);
+			path = UIAlertController;
 			sourceTree = "<group>";
 		};
 		60A9F1112947112C001A2D57 /* Login */ = {
@@ -805,6 +816,7 @@
 				4E677C15272B8650006E325E /* Constants.swift in Sources */,
 				4E677BCE272B827F006E325E /* AppDelegate.swift in Sources */,
 				60A9F14829477996001A2D57 /* JDUser.swift in Sources */,
+				609A1B422948422200A25C55 /* UIAlertController+alert.swift in Sources */,
 				60A9F14029477538001A2D57 /* URLRequest+Extensions.swift in Sources */,
 				60A9F13A29477505001A2D57 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				60A9F14C29477ABE001A2D57 /* RemoteJDAuthenticator.swift in Sources */,

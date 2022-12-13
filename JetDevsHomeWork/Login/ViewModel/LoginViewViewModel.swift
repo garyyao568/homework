@@ -8,6 +8,7 @@
 import Foundation
 
 class LoginViewViewModel {
+    
     let authenticator: JDAuthenticator
     
     init(authenticator: JDAuthenticator) {
