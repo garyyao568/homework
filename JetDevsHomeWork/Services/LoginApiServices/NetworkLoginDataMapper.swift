@@ -13,7 +13,6 @@ final class NetworkLoginDataMapper {
         guard response.isOK else {
             throw NetworkAuthenticator.Error.invalidData
         }
-        
         do {
           let model = try JSONDecoder().decode(NetworkLoginData.self, from: data)
             return model
