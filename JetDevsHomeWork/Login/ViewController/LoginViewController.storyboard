@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tqa-OG-Bxc">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="eQ3-I6-t8f" customClass="LoginViewController" customModule="JetDevsHomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ULj-25-DLa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLS-0r-usf" userLabel="Close button">
+                                <rect key="frame" x="20" y="75" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="FRj-hJ-NZ1"/>
+                                    <constraint firstAttribute="height" constant="16" id="N0V-Or-LfR"/>
+                                </constraints>
+                                <color key="tintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonTap:" destination="eQ3-I6-t8f" eventType="touchUpInside" id="yt2-wH-1PJ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_logo" translatesAutoresizingMaskIntoConstraints="NO" id="poN-ab-GVL">
+                                <rect key="frame" x="104" y="125" width="185" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5qs-Hh-WyC"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIU-pe-mzP" customClass="JDTextField" customModule="JetDevsHomeWork" customModuleProvider="target">
+                                <rect key="frame" x="35" y="238" width="323" height="54"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="JMU-Ti-ttr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ojf-Gk-I0W" customClass="JDTextField" customModule="JetDevsHomeWork" customModuleProvider="target">
+                                <rect key="frame" x="35" y="331" width="323" height="54"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Sgu-Q6-d4q"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QA-dX-Ch6" customClass="JDButton" customModule="JetDevsHomeWork" customModuleProvider="target">
+                                <rect key="frame" x="30" y="527" width="333" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gsf-Ra-hWk"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonTap:" destination="eQ3-I6-t8f" eventType="touchUpInside" id="fDO-4w-3uf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hlj-IL-g10"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9QA-dX-Ch6" firstAttribute="top" secondItem="Ojf-Gk-I0W" secondAttribute="bottom" constant="142" id="4cy-De-OM8"/>
+                            <constraint firstItem="poN-ab-GVL" firstAttribute="centerX" secondItem="hlj-IL-g10" secondAttribute="centerX" id="58N-Ja-LAf"/>
+                            <constraint firstItem="CLS-0r-usf" firstAttribute="leading" secondItem="hlj-IL-g10" secondAttribute="leading" constant="20" id="6pJ-MM-Eeg"/>
+                            <constraint firstItem="AIU-pe-mzP" firstAttribute="top" secondItem="poN-ab-GVL" secondAttribute="bottom" constant="43" id="EYS-ns-BN9"/>
+                            <constraint firstItem="9QA-dX-Ch6" firstAttribute="leading" secondItem="hlj-IL-g10" secondAttribute="leading" constant="30" id="Fce-GU-EqJ"/>
+                            <constraint firstItem="poN-ab-GVL" firstAttribute="top" secondItem="CLS-0r-usf" secondAttribute="bottom" constant="34" id="GSk-t9-FrY"/>
+                            <constraint firstItem="CLS-0r-usf" firstAttribute="top" secondItem="hlj-IL-g10" secondAttribute="top" constant="16" id="NaJ-Dd-fEJ"/>
+                            <constraint firstItem="Ojf-Gk-I0W" firstAttribute="leading" secondItem="hlj-IL-g10" secondAttribute="leading" constant="35" id="QvC-Ue-nXB"/>
+                            <constraint firstItem="hlj-IL-g10" firstAttribute="trailing" secondItem="AIU-pe-mzP" secondAttribute="trailing" constant="35" id="YzN-Rw-NuV"/>
+                            <constraint firstItem="AIU-pe-mzP" firstAttribute="leading" secondItem="hlj-IL-g10" secondAttribute="leading" constant="35" id="bQj-yu-kRF"/>
+                            <constraint firstItem="hlj-IL-g10" firstAttribute="trailing" secondItem="9QA-dX-Ch6" secondAttribute="trailing" constant="30" id="d0Z-55-rRZ"/>
+                            <constraint firstItem="hlj-IL-g10" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9QA-dX-Ch6" secondAttribute="bottom" constant="40" id="pK5-cs-J2F"/>
+                            <constraint firstItem="Ojf-Gk-I0W" firstAttribute="top" secondItem="AIU-pe-mzP" secondAttribute="bottom" constant="39" id="rcj-Z9-CtX"/>
+                            <constraint firstItem="hlj-IL-g10" firstAttribute="trailing" secondItem="Ojf-Gk-I0W" secondAttribute="trailing" constant="35" id="yLU-0J-Hb6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTxtField" destination="AIU-pe-mzP" id="ktl-Tz-fYp"/>
+                        <outlet property="loginButton" destination="9QA-dX-Ch6" id="bjb-WT-rcj"/>
+                        <outlet property="passwordTxtField" destination="Ojf-Gk-I0W" id="dZW-wf-dfD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4V-8q-hVs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="-23"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="22" height="22"/>
+        <image name="home_logo" width="185" height="70"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

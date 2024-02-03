@@ -25,6 +25,9 @@ class AccountViewController: UIViewController {
     }
 	
 	@IBAction func loginButtonTap(_ sender: UIButton) {
+        if let loginVC = UIStoryboard.loginScreen() {
+            navigationController?.present(loginVC, animated: true)
+        }
 	}
 	
 }
