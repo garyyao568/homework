@@ -10,7 +10,7 @@ import Foundation
 /// Represents a networking service capable of performing requests defined by an `Endpoint`.
 ///
 /// This protocol abstracts the details of network communication, allowing for different
-/// implementations that can handle requests and return data asynchronously.
+/// Implementations that can handle requests and return data asynchronously.
 
 protocol Networking {
     

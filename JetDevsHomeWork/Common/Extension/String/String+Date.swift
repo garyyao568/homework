@@ -14,9 +14,9 @@ extension String {
     /// - Returns: An optional `Date` object. Returns `nil` if the string cannot be parsed using the specified format.
     ///
     /// The function is designed to parse date strings effectively, especially those in ISO 8601 format. It sets the
-    /// locale to "en_US_POSIX" to handle fixed-format date strings universally, regardless of the user's locale settings.
+    /// Locale to "en_US_POSIX" to handle fixed-format date strings universally, regardless of the user's locale settings.
     /// The time zone is set to UTC ('Z') by default to align with the common use of ISO 8601 in network communications
-    /// where UTC time is standard. If parsing dates not in UTC, adjust the `timeZone` parameter accordingly.
+    /// Where UTC time is standard. If parsing dates not in UTC, adjust the `timeZone` parameter accordingly.
 
     func toDate(format: String = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'") -> Date? {
         let dateFormatter = DateFormatter()

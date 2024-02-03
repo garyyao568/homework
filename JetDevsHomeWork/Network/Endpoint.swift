@@ -8,7 +8,7 @@
 import Foundation
 
 /// This protocol outlines the necessary components to construct a network request, including
-/// the base URL, path, request headers, parameters, parameter encoding, and HTTP method.
+/// The base URL, path, request headers, parameters, parameter encoding, and HTTP method.
 
 protocol Endpoint {
     
@@ -21,7 +21,7 @@ protocol Endpoint {
 }
 
 /// Provides default implementations for `Endpoint` protocol to create URL components
-/// and requests for network communication.
+/// And requests for network communication.
 extension Endpoint {
     
     var urlComponents: URLComponents {

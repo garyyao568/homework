@@ -11,6 +11,7 @@ struct APIConstants {
     static let baseURL = "https://jetdevs.wiremockapi.cloud"
 
     struct Paths {
+        
         static let login = "/login"
         // Add more paths here
     }

@@ -18,10 +18,6 @@ struct HTTPNetworking: Networking {
         
         let request = from.request
         
-        print("\n\nURL - \(request.url?.absoluteString ?? "")\n")
-        //print("Body - \(request.httpBody?.toString() ?? "")")
-        print("Headers - \(request.allHTTPHeaderFields)")
-        
         let task = createDataTask(from: request, completion: completion)
         task.resume()
     }
@@ -29,10 +25,8 @@ struct HTTPNetworking: Networking {
     /// Creates a `URLSessionDataTask` with the given request, handling completion and errors.
     private func createDataTask(from request: URLRequest,
                                 completion: @escaping (Networking.Result) -> Void) -> URLSessionDataTask {
-        print("--Request\(request)")
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            print("Resp data..: \(response)--\(data)")
 
             completion(Result {
                 if let error = error {
