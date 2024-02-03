@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -165,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				4E677C12272B860A006E325E /* Common */,
-				4E677C08272B83E4006E325E /* Login */,
 				4E677C01272B8367006E325E /* Account */,
 				4E677C00272B8360006E325E /* Home */,
 				4E677BFD272B82D9006E325E /* TabBar */,
@@ -266,37 +265,6 @@
 			sourceTree = "<group>";
 		};
 		4E677C07272B83DD006E325E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		4E677C08272B83E4006E325E /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				4E677C0B272B83FA006E325E /* Views */,
-				4E677C0A272B83F5006E325E /* ViewModel */,
-				4E677C09272B83EE006E325E /* ViewController */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		4E677C09272B83EE006E325E /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		4E677C0A272B83F5006E325E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4E677C0B272B83FA006E325E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
