@@ -8,13 +8,16 @@
 import Foundation
 
 struct AuthenticationParameters {
+    
     let email: String
     let password: String
 }
 protocol Authenticator {
+    
        /// Represents the result of an authentication attempt.
-       /// This typealias enhances readability by specifying whether the authentication
-       /// was successful (`UserData`) or resulted in an error (`Error`).
+       /* This typealias enhances readability by specifying whether the authentication
+        was successful (`UserData`) or resulted in an error (`Error`).
+    */
        typealias Result = Swift.Result<UserData, Error>
        
        /// - Parameters:

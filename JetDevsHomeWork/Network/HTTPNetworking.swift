@@ -18,10 +18,6 @@ struct HTTPNetworking: Networking {
         
         let request = from.request
         
-        print("\n\nURL - \(request.url?.absoluteString ?? "")\n")
-        //print("Body - \(request.httpBody?.toString() ?? "")")
-        print("Headers - \(request.allHTTPHeaderFields)")
-        
         let task = createDataTask(from: request, completion: completion)
         task.resume()
     }

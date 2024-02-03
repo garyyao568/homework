@@ -37,13 +37,10 @@ class LoginViewModel {
             guard let self = self else {
                 return
             }
-            print("--param\(params)")
 
             switch result {
             case let .success(user):
                 self.saveUserData(user: user)
-                print("response:\(result)")
-                print("response:\(user)")
                 completion(nil)
             case let .failure(error):
                 completion(error)
@@ -60,8 +57,6 @@ class LoginViewModel {
         UserDefaults.standard.set(data, forKey: "user")
     }
 }
-
-
 
 private extension UserData {
     

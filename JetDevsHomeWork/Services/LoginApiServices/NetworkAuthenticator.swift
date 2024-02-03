@@ -40,7 +40,6 @@ final class NetworkAuthenticator: Authenticator {
     }
     
     private static func map(_ data: Data, from response: HTTPURLResponse) -> Result {
-        print("mapping fail....")
         do {
             let dataModel = try NetworkLoginDataMapper.map(data, from: response)
             let featureModel = try dataModel.toUserModel()
