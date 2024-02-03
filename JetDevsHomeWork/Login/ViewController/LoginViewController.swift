@@ -10,7 +10,6 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTxtField: JDTextField!
-    
     @IBOutlet weak var passwordTxtField: JDTextField!
     @IBOutlet weak var loginButton: JDButton!
     
@@ -45,7 +44,6 @@ class LoginViewController: UIViewController {
         
         emailTxtField.textFieldDidChange = setEmail(with:)
         emailTxtField.textFieldShouldReturn = dismissKeyBoard
-        emailTxtField.textField.text = "test@jetdevs.com"
     }
     
     private func setuppasswordTxtField() {
@@ -55,7 +53,6 @@ class LoginViewController: UIViewController {
         
         passwordTxtField.textFieldDidChange = setPassword(with:)
         passwordTxtField.textFieldShouldReturn = dismissKeyBoard
-        passwordTxtField.textField.text = "Jetdevs2021"
 
     }
     
