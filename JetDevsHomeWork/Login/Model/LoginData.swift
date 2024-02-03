@@ -8,6 +8,7 @@
 import Foundation
 
 struct LoginData {
+    
     let user: UserData?
     let error: String?
 }

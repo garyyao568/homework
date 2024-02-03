@@ -7,6 +7,7 @@
 
 import Foundation
 struct APIConstants {
+    
     static let baseURL = "https://jetdevs.wiremockapi.cloud"
 
     struct Paths {

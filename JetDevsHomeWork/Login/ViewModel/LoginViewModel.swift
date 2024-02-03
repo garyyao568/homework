@@ -9,7 +9,11 @@ import Foundation
 
 class LoginViewModel {
     
-  
+    let authenticator: Authenticator
+    
+    init(authenticator: Authenticator) {
+        self.authenticator = authenticator
+    }
     private var email = ""
     private var password = ""
     
@@ -25,6 +29,28 @@ class LoginViewModel {
         return (email.isValidEmail && password.isValidPassword)
     }
     
+    func authUser(completion: @escaping (Error?) -> Void) {
+        let params = AuthenticationParameters(email: email,
+                                           password: password)
+        
+        authenticator.login(params: params) { [weak self] result in
+            guard let self = self else {
+                return
+            }
+            print("--param\(params)")
+
+            switch result {
+            case let .success(user):
+                self.saveUserData(user: user)
+                print("response:\(result)")
+                print("response:\(user)")
+                completion(nil)
+            case let .failure(error):
+                completion(error)
+            }
+        }
+    }
+    
     func saveUserData(user: UserData) {
         let localUser = user.toLocalModel()
         
@@ -34,6 +60,8 @@ class LoginViewModel {
         UserDefaults.standard.set(data, forKey: "user")
     }
 }
+
+
 
 private extension UserData {
     
