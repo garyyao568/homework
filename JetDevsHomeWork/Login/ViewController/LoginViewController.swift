@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTxtField: JDTextField!
     @IBOutlet weak var loginButton: JDButton!
     
+    var loaderView: UIActivityIndicatorView!
     var viewModel = LoginViewModel()
     
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class LoginViewController: UIViewController {
         setupemailTxtField()
         setuppasswordTxtField()
         setupLoginButton()
+        setIndicatorView()
     }
     private func setupemailTxtField() {
         emailTxtField.setTextFieldLabel(with: "Email")
@@ -71,6 +73,21 @@ class LoginViewController: UIViewController {
     private func setPassword(with text: String) {
         viewModel.setPassword(with: text)
         hanldeLoginButton()
+    }
+    
+    private func setIndicatorView() {
+        loaderView = UIActivityIndicatorView.activityIndicator(center: self.view.center)
+        self.view.addSubview(loaderView)
+    }
+    
+    private func startLoading() {
+        loaderView.startAnimating()
+        view.isUserInteractionEnabled = false
+    }
+    
+    private func stopLoading() {
+        loaderView.stopAnimating()
+        view.isUserInteractionEnabled = true
     }
     
     private func dismissKeyBoard() {
