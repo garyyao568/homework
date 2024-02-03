@@ -15,36 +15,37 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: JDButton!
     
     var loaderView: UIActivityIndicatorView!
-    var viewModel = LoginViewModel()
-    
+    var viewModel = LoginViewModel(authenticator: NetworkAuthenticator(networking: HTTPNetworking()))
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUIElements()
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - Action button
     @IBAction func loginButtonTap(_ sender: AnyObject) {
-        
+        // Trigger user auth process
+        authorizeUser()
     }
     @IBAction func closeButtonTap(_ sender: AnyObject) {
         self.dismiss(animated: true)
     }
-   
+
+    // MARK: - UI Setup
     private func setupUIElements() {
         setupemailTxtField()
         setuppasswordTxtField()
         setupLoginButton()
         setIndicatorView()
     }
-    private func setupemailTxtField() {
+    private func setupemailTxtField() {        
         emailTxtField.setTextFieldLabel(with: "Email")
         emailTxtField.setTextField(placeholder: "Email",
                              keyboardType: .emailAddress)
         
         emailTxtField.textFieldDidChange = setEmail(with:)
         emailTxtField.textFieldShouldReturn = dismissKeyBoard
+        emailTxtField.textField.text = "test@jetdevs.com"
     }
     
     private func setuppasswordTxtField() {
@@ -54,6 +55,8 @@ class LoginViewController: UIViewController {
         
         passwordTxtField.textFieldDidChange = setPassword(with:)
         passwordTxtField.textFieldShouldReturn = dismissKeyBoard
+        passwordTxtField.textField.text = "Jetdevs2021"
+
     }
     
     private func setupLoginButton() {
@@ -92,6 +95,23 @@ class LoginViewController: UIViewController {
     
     private func dismissKeyBoard() {
         view.endEditing(true)
+    }
+    
+    // MARK: - User authentication
+    private func authorizeUser() {
+        startLoading()
+        
+        viewModel.authUser { [weak self] error in
+            DispatchQueue.main.async {
+               self?.stopLoading()
+                
+                if let error = error {
+                    UIAlertController.alert(message: error.localizedDescription)
+                } else {
+                    self?.dismiss(animated: true)
+                }
+            }
+        }
     }
 
 }

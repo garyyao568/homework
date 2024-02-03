@@ -17,13 +17,13 @@ final class NetworkAuthenticator: Authenticator {
         case invalidData
     }
     
-    typealias Result = Authenticator.AuthenticationResult
+    typealias Result = Authenticator.Result
     
     init(networking: Networking) {
         self.networking = networking
     }
     
-    func login(with params: AuthenticationParameters, completion: @escaping (Result) -> Void) {
+    func login(params: AuthenticationParameters, completion: @escaping (Result) -> Void) {
         networking.request(from: NetworkAuth.login(params: params)) { [weak self] result in
             guard self != nil
             else {
@@ -40,6 +40,7 @@ final class NetworkAuthenticator: Authenticator {
     }
     
     private static func map(_ data: Data, from response: HTTPURLResponse) -> Result {
+        print("mapping fail....")
         do {
             let dataModel = try NetworkLoginDataMapper.map(data, from: response)
             let featureModel = try dataModel.toUserModel()
@@ -53,11 +54,11 @@ final class NetworkAuthenticator: Authenticator {
 private extension NetworkLoginData {
     
     func toUserModel() throws -> UserData {
-        guard errorMessage.isEmpty,
+        guard error_message.isEmpty,
               let user = data?.user
         else {
             throw NSError(domain: "API Error", code: 401, userInfo: [
-                NSLocalizedDescriptionKey: errorMessage
+                NSLocalizedDescriptionKey: error_message
             ])
         }
         
@@ -68,9 +69,10 @@ private extension NetworkLoginData {
 private extension NetworkLoginDataUser {
     
     func toModel() -> UserData {
-        return UserData(userID: userId,
-                      name: userName,
-                      profileURL: userProfileUrl,
-                      createdAt: createdAt)
+        return UserData(userID: user_id,
+                      name: user_name,
+                      profileURL: user_profile_url,
+                      createdAt: created_at)
     }
+    
 }
