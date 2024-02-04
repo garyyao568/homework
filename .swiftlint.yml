@@ -15,6 +15,7 @@ disabled_rules: # rule identifiers to exclude from running
   - function_parameter_count
   - trailing_whitespace
   - single_line_body
+  - identifier_name
 
 excluded: # paths to ignore during linting. overridden by `included`.
   - Carthage
